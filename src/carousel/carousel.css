@@ -1,0 +1,41 @@
+.image-carousel .modal-dialog {
+  width: 100%;
+  margin: 0;
+}
+
+.image-carousel .slick-slider, .image-carousel .slick-list {
+  height: 80vh;
+}
+
+.image-carousel .SmallPics {
+  opacity: 1 !important;
+  height: 80vh;
+  object-fit: contain;
+}
+
+.image-carousel .modal-content {
+  background: none;
+  border: none;
+  box-shadow: none;
+  width: 100%;
+  max-width: none;
+}
+
+.image-carousel .slick-next {
+  right: 1rem;
+}
+
+.image-carousel .slick-prev {
+  left: 0;
+}
+
+.image-carousel__body {
+  width: 100%;
+}
+
+.image-carousel__close {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 3rem;
+}

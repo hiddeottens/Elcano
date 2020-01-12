@@ -1,0 +1,65 @@
+.notification-slide-in {
+  -webkit-animation: slideIn 0.7s forwards;
+  -moz-animation: slideIn 0.7s forwards;
+  animation: slideIn 0.7s forwards;
+}
+
+.notification-slide-out {
+  -webkit-animation: slideOut 0.7s forwards;
+  -moz-animation: slideOut 0.7s forwards;
+  animation: slideOut 0.7s forwards;
+}
+
+@-webkit-keyframes slideIn {
+ 0% {
+   -webkit-transform: translateY(-50px);
+ }
+ 100% {
+   -webkit-transform: translateY(0);
+ }
+}
+
+@-moz-keyframes slideIn {
+ 0% {
+   transform: translateY(-50px);
+ }
+ 100% {
+   transform: translateY(0);
+ }
+}
+
+@keyframes slideIn {
+ 0% {
+   transform: translateY(-50px);
+ }
+ 100% {
+   transform: translateY(0);
+ }
+}
+
+@-webkit-keyframes slideOut {
+ 0% {
+   -webkit-transform: translateY(0);
+ }
+ 100% {
+   -webkit-transform: translateY(-50px);
+ }
+}
+
+@-moz-keyframes slideOut {
+ 0% {
+   transform: translateY(0);
+ }
+ 100% {
+   transform: translateY(-50px);
+ }
+}
+
+@keyframes slideOut {
+ 0% {
+   transform: translateY(0);
+ }
+ 100% {
+   transform: translateY(-50px);
+ }
+}
