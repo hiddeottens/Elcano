@@ -1,12 +1,11 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import './loader.css';
 
-const propTypes = {
-  children: PropTypes.element.isRequired
+export interface LoaderProps {
+  children?: any;
 };
 
-function Loader(props) {
+export default function Loader(props: LoaderProps) {
   return (
     <div style={{ marginTop: 150 }}>
       {props.children}
@@ -18,6 +17,3 @@ function Loader(props) {
     </div>
   );
 }
-
-Loader.propTypes = propTypes;
-export default Loader;

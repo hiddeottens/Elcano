@@ -1,3 +1,2 @@
-// @ts-ignore
-import Loader from './Loader.jsx';
+import Loader from './Loader';
 export { Loader };

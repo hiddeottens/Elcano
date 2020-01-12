@@ -1,3 +1,20 @@
+.notification {
+  width: '100%';
+  top: 56px;
+  position: 'fixed';
+  text-align: 'center';
+  color: '#fff';
+  z-index: 99px;
+  height: 25px;
+}
+
+.notification__text {
+  position: 'absolute';
+  top: '50%';
+  left: '50%';
+  transform: 'translate(-50%, -50%)';
+}
+
 .notification-slide-in {
   -webkit-animation: slideIn 0.7s forwards;
   -moz-animation: slideIn 0.7s forwards;
