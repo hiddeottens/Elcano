@@ -5,19 +5,23 @@ export default {
   title: 'Buttons',
 };
 
-export const standard = () => <Button
-  className="red-btn-fill"
-  title="Test me!"
-  onClick={() => {}}
-  id="red-btn"
- />;
+export const standard = () => (
+  <Button
+    className="red-btn-fill"
+    title="Test me!"
+    onClick={() => {}}
+    id="red-btn"
+  />
+);
 
- export const empty = () => <Button
-  className="red-btn-empty"
-  title="Test me!"
-  onClick={() => {}}
-  id="red-btn"
- />;
+export const empty = () => (
+  <Button
+    className="red-btn-empty"
+    title="Test me!"
+    onClick={() => {}}
+    id="red-btn"
+  />
+);
 
 standard.story = {
   name: 'Standard',
@@ -25,4 +29,4 @@ standard.story = {
 
 empty.story = {
   name: 'Empty',
-}
+};

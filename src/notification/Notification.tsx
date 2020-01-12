@@ -7,7 +7,7 @@ export interface NotificationProps {
   visible: boolean;
   text: string;
   type: NotificationType;
-};
+}
 
 export default function Notification(props: NotificationProps) {
   const { text, type, visible } = props;
@@ -17,21 +17,17 @@ export default function Notification(props: NotificationProps) {
         className={`notification notification-slide-${visible ? 'in' : 'out'}`}
         style={{ height: '100%' }}
       >
-        {
-          visible &&
-            <div
-              style={{
-                height: '100%',
-                position: 'relative',
-                backgroundColor: type === 'success' ? '#2ddad3' : '#f46d6d'
-              }}
-            >
-              <p
-                className="notification__text"
-              >{text}
-              </p>
-            </div>
-        }
+        {visible && (
+          <div
+            style={{
+              height: '100%',
+              position: 'relative',
+              backgroundColor: type === 'success' ? '#2ddad3' : '#f46d6d',
+            }}
+          >
+            <p className="notification__text">{text}</p>
+          </div>
+        )}
       </div>
     </div>
   );

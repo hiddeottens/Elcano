@@ -8,12 +8,10 @@ const propTypes = {
   image: PropTypes.objectOf(PropTypes.string).isRequired,
   images: PropTypes.arrayOf(PropTypes.object).isRequired,
   visible: PropTypes.bool.isRequired,
-  onToggle: PropTypes.func.isRequired
+  onToggle: PropTypes.func.isRequired,
 };
 
-function ImageCarousel({
-  images, image, visible, onToggle
-}) {
+function ImageCarousel({ images, image, visible, onToggle }) {
   const index = images.findIndex(x => x.src === image.src);
   return (
     <Modal
@@ -23,11 +21,8 @@ function ImageCarousel({
       className="image-carousel"
     >
       <Modal.Body className="image-carousel__body">
-        <button
-          className="image-carousel__close"
-          onClick={onToggle}
-        >
-        x
+        <button className="image-carousel__close" onClick={onToggle}>
+          x
         </button>
         <div>
           <Slider

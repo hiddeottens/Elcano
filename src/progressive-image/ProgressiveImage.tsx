@@ -12,12 +12,15 @@ export interface ProgressiveImageState {
   loading: boolean;
 }
 
-export default class ProgressiveImage extends Component<ProgressiveImageProps, ProgressiveImageState> {
+export default class ProgressiveImage extends Component<
+  ProgressiveImageProps,
+  ProgressiveImageState
+> {
   constructor(props: ProgressiveImageProps) {
     super(props);
     this.state = {
       loading: true,
-      image: props.image.preview
+      image: props.image.preview,
     };
   }
 
@@ -34,10 +37,10 @@ export default class ProgressiveImage extends Component<ProgressiveImageProps, P
   update = () => {
     this.setState({
       loading: true,
-      image: this.props.image.preview
+      image: this.props.image.preview,
     });
     this.fetchImage();
-  }
+  };
 
   fetchImage = () => {
     if (this.props.image.src) {
@@ -45,7 +48,7 @@ export default class ProgressiveImage extends Component<ProgressiveImageProps, P
       image.onload = () => this.setState({ image: image.src, loading: false });
       image.src = this.props.image.src;
     }
-  }
+  };
 
   renderStyle = (loading: boolean) => ({
     transition: '0.5s filter linear',
@@ -53,8 +56,8 @@ export default class ProgressiveImage extends Component<ProgressiveImageProps, P
     WebkitFilter: `${loading ? 'blur(15px)' : ''}`,
     MozFilter: `${loading ? 'blur(15px)' : ''}`,
     OFilter: `${loading ? 'blur(15px)' : ''}`,
-    msFilter: `${loading ? 'blur(15px)' : ''}`
-  })
+    msFilter: `${loading ? 'blur(15px)' : ''}`,
+  });
 
   render() {
     const { loading, image } = this.state;
@@ -65,7 +68,7 @@ export default class ProgressiveImage extends Component<ProgressiveImageProps, P
         alt={alt}
         style={{
           ...style,
-          ...this.renderStyle(loading)
+          ...this.renderStyle(loading),
         }}
         {...rest}
       />

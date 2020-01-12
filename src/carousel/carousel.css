@@ -3,7 +3,8 @@
   margin: 0;
 }
 
-.image-carousel .slick-slider, .image-carousel .slick-list {
+.image-carousel .slick-slider,
+.image-carousel .slick-list {
   height: 80vh;
 }
 

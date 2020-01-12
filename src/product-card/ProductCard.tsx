@@ -19,16 +19,16 @@ const imgStyle = {
   width: '100%',
   height: '100%',
   left: '50%',
-  objectFit: 'contain'
-}
+  objectFit: 'contain',
+};
 
 export default function ProductCard(props: ProductCardProps) {
-    const { product, onClick } = props; 
-    return (
-      <Card>
-        <div style={{ height: 320, position: 'relative' }}>
-          <div style={{ position: 'absolute', top: 0, width: '100%' }}>
-            {/* <ShareButton
+  const { product, onClick } = props;
+  return (
+    <Card>
+      <div style={{ height: 320, position: 'relative' }}>
+        <div style={{ position: 'absolute', top: 0, width: '100%' }}>
+          {/* <ShareButton
               width={38}
               selected={product.title}
               shopId={product.shop_id}
@@ -40,37 +40,32 @@ export default function ProductCard(props: ProductCardProps) {
               type="products"
               product={product}
             /> */}
-          </div>
-            <div 
-            className="product-card__body"
-            onClick={() => onClick()}
-             >
-              <ProgressiveImage
-                style={imgStyle}
-                image={product.image ? product.image : {
-                  src: '',
-                  preview: ''
-                }}
-                alt={product.title}
-              />
-              <div>
-                {
-                  product.title && product.title.length > 35 ?
-                    <h4 className="product-card__title"
-                    >
-                      {(product.title).slice(0, 35).concat('...')}
-                    </h4> :
-                    <h4 className="product-card__title"
-                    >
-                      {(product.title)}
-                    </h4>
-                }
-                <p className="product-card__price"
-                >{product.price}
-                </p>
-              </div>
-            </div>
         </div>
-      </Card>
-    );
-  }
+        <div className="product-card__body" onClick={() => onClick()}>
+          <ProgressiveImage
+            style={imgStyle}
+            image={
+              product.image
+                ? product.image
+                : {
+                    src: '',
+                    preview: '',
+                  }
+            }
+            alt={product.title}
+          />
+          <div>
+            {product.title && product.title.length > 35 ? (
+              <h4 className="product-card__title">
+                {product.title.slice(0, 35).concat('...')}
+              </h4>
+            ) : (
+              <h4 className="product-card__title">{product.title}</h4>
+            )}
+            <p className="product-card__price">{product.price}</p>
+          </div>
+        </div>
+      </div>
+    </Card>
+  );
+}

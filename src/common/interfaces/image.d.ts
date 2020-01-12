@@ -1,4 +1,4 @@
 export interface Image {
-    src: string;
-    preview: string;
+  src: string;
+  preview: string;
 }

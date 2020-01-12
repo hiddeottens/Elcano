@@ -13,15 +13,16 @@ const exampleProduct = {
   title: 'test',
   price: '$12',
   image: {
-    src: 'https://sc02.alicdn.com/kf/HTB10O8zdTZRMeJjSspkq6xGpXXa9/China-Factory-Wholesale-Slim-Fit-Plain-Tshirt.jpg_350x350.jpg',
-    preview: 'https://sc02.alicdn.com/kf/HTB10O8zdTZRMeJjSspkq6xGpXXa9/China-Factory-Wholesale-Slim-Fit-Plain-Tshirt.jpg_350x350.jpg'
-  }
-}
+    src:
+      'https://sc02.alicdn.com/kf/HTB10O8zdTZRMeJjSspkq6xGpXXa9/China-Factory-Wholesale-Slim-Fit-Plain-Tshirt.jpg_350x350.jpg',
+    preview:
+      'https://sc02.alicdn.com/kf/HTB10O8zdTZRMeJjSspkq6xGpXXa9/China-Factory-Wholesale-Slim-Fit-Plain-Tshirt.jpg_350x350.jpg',
+  },
+};
 
-export const product = () => <ProductCard 
-  onClick={() => {}}
-  product={exampleProduct}
-/>
+export const product = () => (
+  <ProductCard onClick={() => {}} product={exampleProduct} />
+);
 
 standard.story = {
   name: 'Standard',
@@ -29,4 +30,4 @@ standard.story = {
 
 product.story = {
   name: 'Product',
-}
+};

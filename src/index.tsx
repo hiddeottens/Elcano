@@ -1,4 +1,4 @@
-export { Loader } from './loader'; 
+export { Loader } from './loader';
 export { Button } from './button';
 export { Card } from './card';
 export { ProductCard } from './product-card';
