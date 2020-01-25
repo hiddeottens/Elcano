@@ -13,7 +13,8 @@
   "scripts": {
     "start": "tsdx watch",
     "build": "tsdx build",
-    "test": "tsdx test --env=jsdom --passWithNoTests",
+    "test": "echo 'No tests available'",
+    "test:unit": "tsdx test --env=jsdom --passWithNoTests",
     "lint": "tsdx lint",
     "prepare": "tsdx build",
     "storybook": "start-storybook -p 6006",
