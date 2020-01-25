@@ -15,13 +15,6 @@ export interface ProductCardProps {
   onClick: Function;
 }
 
-const imgStyle = {
-  width: '100%',
-  height: '100%',
-  left: '50%',
-  objectFit: 'contain',
-};
-
 export default function ProductCard(props: ProductCardProps) {
   const { product, onClick } = props;
   return (
@@ -43,7 +36,6 @@ export default function ProductCard(props: ProductCardProps) {
         </div>
         <div className="product-card__body" onClick={() => onClick()}>
           <ProgressiveImage
-            style={imgStyle}
             image={
               product.image
                 ? product.image
@@ -53,6 +45,8 @@ export default function ProductCard(props: ProductCardProps) {
                   }
             }
             alt={product.title}
+            width={400}
+            height={200}
           />
           <div>
             {product.title && product.title.length > 35 ? (

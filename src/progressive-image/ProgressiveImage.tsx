@@ -1,17 +1,23 @@
 import React, { Component } from 'react';
-import { Image } from '../common/interfaces/image';
+import { Image as ImageInterface } from '../common/interfaces/image';
+import {
+  Root,
+  Wrapper,
+  ImageComponent
+} from './ProgressiveImageStyles'
 
 export interface ProgressiveImageProps {
-  image: Image;
-  style?: any;
+  image: ImageInterface;
   alt?: string;
+  rounded?: boolean;
+  width: number;
+  height: number;
 }
 
 export interface ProgressiveImageState {
   image: string;
   loading: boolean;
 }
-
 export default class ProgressiveImage extends Component<
   ProgressiveImageProps,
   ProgressiveImageState
@@ -50,28 +56,23 @@ export default class ProgressiveImage extends Component<
     }
   };
 
-  renderStyle = (loading: boolean) => ({
-    transition: '0.5s filter linear',
-    filter: `${loading ? 'blur(15px)' : ''}`,
-    WebkitFilter: `${loading ? 'blur(15px)' : ''}`,
-    MozFilter: `${loading ? 'blur(15px)' : ''}`,
-    OFilter: `${loading ? 'blur(15px)' : ''}`,
-    msFilter: `${loading ? 'blur(15px)' : ''}`,
-  });
-
   render() {
     const { loading, image } = this.state;
-    const { style, alt, ...rest } = this.props;
+    const { alt, width, height, rounded, ...rest } = this.props;
     return (
-      <img
-        src={image}
-        alt={alt}
-        style={{
-          ...style,
-          ...this.renderStyle(loading),
-        }}
-        {...rest}
-      />
+      <Root width={width}>
+        <Wrapper width={width} height={height} rounded={rounded}>
+          <ImageComponent
+            src={image}
+            alt={alt}
+            loading={loading}
+            width={width}
+            height={height}
+            rounded={rounded}
+            {...rest}
+          />
+        </Wrapper>
+      </Root>
     );
   }
 }
