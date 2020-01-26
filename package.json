@@ -48,6 +48,7 @@
     "@types/react-dom": "^16.9.4",
     "autoprefixer": "^9.7.3",
     "babel-loader": "^8.0.6",
+    "babel-plugin-emotion": "^10.0.27",
     "bootstrap": "^3.3.7",
     "cssnano": "^4.1.10",
     "csstype": "^2.6.8",
@@ -66,9 +67,5 @@
     "tsdx": "^0.12.0",
     "tslib": "^1.10.0",
     "typescript": "^3.7.4"
-  },
-  "dependencies": {
-    "@emotion/core": "^10.0.27",
-    "@emotion/styled": "^10.0.27"
   }
 }

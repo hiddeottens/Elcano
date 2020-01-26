@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, ProductCard } from '../src';
+import { Card, ProductCard, CardOverlay } from '../src';
 
 export default {
   title: 'Cards',
@@ -24,10 +24,19 @@ export const product = () => (
   <ProductCard onClick={() => {}} product={exampleProduct} />
 );
 
+export const overlay = () => (
+  <CardOverlay />
+);
+
+
 standard.story = {
   name: 'Standard',
 };
 
 product.story = {
   name: 'Product',
+};
+
+overlay.story = {
+  name: 'Overlay',
 };

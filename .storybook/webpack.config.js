@@ -4,6 +4,9 @@ module.exports = ({ config }) => {
     test: /\.tsx?$/,
     use: [
       {
+        loader: require.resolve('babel-loader'),
+      },
+      {
         loader: require.resolve('ts-loader'),
         options: {
           reportFiles: ['stories/**/*.{ts|tsx}'],
