@@ -8,7 +8,7 @@ export interface NavbarProps {
 const Nav = styled.nav`
     width: 100%;
     border: none;
-    box-shadow: 0 4px 8px #f0f1f2;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.06);
     height: 1em;
     position: fixed;
     top: 0;
@@ -16,7 +16,7 @@ const Nav = styled.nav`
     align-items: center;
     padding: 1em;
     z-index: 500;
-    color: white;
+    background: white;
 `;
 
 export default function Navbar(props: NavbarProps) {
