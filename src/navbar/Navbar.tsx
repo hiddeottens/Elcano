@@ -16,6 +16,7 @@ const Nav = styled.nav`
     align-items: center;
     padding: 1em;
     z-index: 500;
+    color: white;
 `;
 
 export default function Navbar(props: NavbarProps) {
