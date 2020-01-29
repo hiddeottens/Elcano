@@ -14,7 +14,7 @@ export interface RootProps {
 
 export interface WrapperProps {
   width: number;
-  height: number;
+  height?: number;
   rounded?: boolean;
 }
 

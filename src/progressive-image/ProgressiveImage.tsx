@@ -11,7 +11,7 @@ export interface ProgressiveImageProps {
   alt?: string;
   rounded?: boolean;
   width: number;
-  height: number;
+  height?: number;
 }
 
 export interface ProgressiveImageState {
