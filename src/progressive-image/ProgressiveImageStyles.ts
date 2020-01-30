@@ -27,7 +27,7 @@ export const Wrapper = styled.div`
   position: relative;
   height: 0;
   padding-top: ${(props: WrapperProps): CSS.GlobalsString =>
-    `calc(${props.height} / ${props.width} * 100%)`};
+    `calc(${props.height || 0} / ${props.width} * 100%)`};
   background: #E5E5E5;
   background-size: cover;
   border-radius: ${(props: WrapperProps): CSS.GlobalsString =>
