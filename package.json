@@ -28,12 +28,6 @@
       "pre-commit": "tsdx lint"
     }
   },
-  "prettier": {
-    "printWidth": 80,
-    "semi": true,
-    "singleQuote": true,
-    "trailingComma": "es5"
-  },
   "name": "elcano",
   "author": "Hidde Ottens",
   "module": "dist/elcano.esm.js",
@@ -43,11 +37,13 @@
     "@storybook/addon-links": "^5.2.8",
     "@storybook/addons": "^5.2.8",
     "@storybook/react": "^5.2.8",
+    "@types/autoprefixer": "^9.7.2",
     "@types/jest": "^24.0.25",
     "@types/react": "^16.9.17",
     "@types/react-dom": "^16.9.4",
     "@types/rebass": "^4.0.7",
     "@types/rebass__forms": "^4.0.4",
+    "@types/rollup-plugin-postcss": "^2.0.1",
     "autoprefixer": "^9.7.3",
     "babel-loader": "^8.0.6",
     "babel-plugin-emotion": "^10.0.27",
@@ -56,6 +52,7 @@
     "csstype": "^2.6.8",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.12.0",
     "eslint-plugin-import": "^2.20.0",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.18.0",
