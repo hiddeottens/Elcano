@@ -1,9 +1,7 @@
-// @ts-nocheck
 import styled from '@emotion/styled';
-import * as CSS from 'csstype';
 
 export interface ImageProps {
-  loading: boolean;
+  isLoading: boolean;
   rounded?: boolean;
 }
 
@@ -18,23 +16,21 @@ export interface WrapperProps {
 }
 
 export const Root = styled.div`
-  width: ${(props: RootProps): CSS.GlobalsString => `${props.width}px`};
+  width: ${(props: RootProps) => `${props.width}px`};
 `;
 
 export const Wrapper = styled.div`
   position: relative;
   height: 0;
-  padding-top: ${(props: WrapperProps): CSS.GlobalsString =>
+  padding-top: ${(props: WrapperProps) =>
     `calc(${props.height || 0} / ${props.width} * 100%)`};
   background: #e5e5e5;
   background-size: cover;
-  border-radius: ${(props: WrapperProps): CSS.GlobalsString =>
-    props.rounded ? '50%' : ''};
+  border-radius: ${(props: WrapperProps) => (props.rounded ? '50%' : '')};
 `;
 
 export const ImageComponent = styled.img`
-  filter: ${(props: ImageProps): CSS.GlobalsString =>
-    props.loading ? 'blur(15px)' : ''};
+  filter: ${(props: ImageProps) => (props.isLoading ? 'blur(15px)' : '')};
   transition: 0.5s filter linear;
   position: absolute;
   top: 0;
@@ -42,6 +38,5 @@ export const ImageComponent = styled.img`
   max-width: 100%;
   height: auto;
   vertical-align: middle;
-  border-radius: ${(props: ImageProps): CSS.GlobalsString =>
-    props.rounded ? '50%' : ''};
+  border-radius: ${(props: ImageProps) => (props.rounded ? '50%' : '')};
 `;

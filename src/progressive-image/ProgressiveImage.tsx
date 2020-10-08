@@ -70,7 +70,7 @@ export default class ProgressiveImage extends Component<
           <ImageComponent
             src={image}
             alt={alt}
-            loading={loading}
+            isLoading={loading}
             width={width}
             height={height}
             rounded={rounded}
