@@ -1,1 +1,5 @@
-export { Heading } from 'rebass';
+import { Heading } from 'rebass';
+
+export { Heading };
+
+export default Heading;

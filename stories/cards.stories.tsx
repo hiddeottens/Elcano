@@ -24,10 +24,7 @@ export const product = () => (
   <ProductCard onClick={() => {}} product={exampleProduct} />
 );
 
-export const overlay = () => (
-  <CardOverlay />
-);
-
+export const overlay = () => <CardOverlay />;
 
 standard.story = {
   name: 'Standard',

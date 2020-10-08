@@ -51,15 +51,13 @@ export default function ProductCard(props: ProductCardProps) {
           </div>
         </Body>
         <Footer>
-            {product.title && product.title.length > 35 ? (
-              <Title>
-                {product.title.slice(0, 35).concat('...')}
-              </Title>
-            ) : (
-              <Title>{product.title}</Title>
-            )}
-            <Price>{product.price}</Price>
-          </Footer>
+          {product.title && product.title.length > 35 ? (
+            <Title>{product.title.slice(0, 35).concat('...')}</Title>
+          ) : (
+            <Title>{product.title}</Title>
+          )}
+          <Price>{product.price}</Price>
+        </Footer>
       </Wrapper>
     </Card>
   );

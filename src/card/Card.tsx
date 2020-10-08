@@ -6,18 +6,14 @@ export interface CardProps {
   noHover?: boolean;
 }
 
-export default function Card(props: CardProps) {
+export default function Card({ noHover, children }: CardProps) {
   return (
-    <div>
-      {
-        props.noHover ? 
-        <CardShadow>
-          {...props.children}
-          </CardShadow> :
-        <CardHover>
-          {...props.children}
-          </CardHover>
-      }
-    </div>
+    <>
+      {noHover ? (
+        <CardShadow>{...children}</CardShadow>
+      ) : (
+        <CardHover>{...children}</CardHover>
+      )}
+    </>
   );
 }

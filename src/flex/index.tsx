@@ -1,1 +1,5 @@
-export { Flex } from 'rebass';
+import { Flex } from 'rebass';
+
+export { Flex };
+
+export default Flex;

@@ -1,6 +1,6 @@
-/// <reference types="react" />
-import './product-card.css';
+// / <reference types="react" />
 import { Image } from '../common/interfaces/image';
+
 export interface Product {
   title: string;
   price: string;

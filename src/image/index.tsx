@@ -1,1 +1,5 @@
-export { Image } from 'rebass';
+import { Image } from 'rebass';
+
+export { Image };
+
+export default Image;

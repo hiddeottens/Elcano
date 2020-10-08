@@ -1,1 +1,4 @@
-export { Textarea } from '@rebass/forms';
+import { Textarea } from '@rebass/forms';
+
+export { Textarea };
+export default Textarea;

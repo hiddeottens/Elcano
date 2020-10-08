@@ -1,5 +1,6 @@
-/// <reference types="react" />
+// / <reference types="react" />
 import './loader.css';
+
 export interface LoaderProps {
   children?: any;
 }

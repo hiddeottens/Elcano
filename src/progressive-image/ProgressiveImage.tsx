@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 import { Image as ImageInterface } from '../common/interfaces/image';
-import {
-  Root,
-  Wrapper,
-  ImageComponent
-} from './ProgressiveImageStyles'
+import { Root, Wrapper, ImageComponent } from './ProgressiveImageStyles';
 
 export interface ProgressiveImageProps {
   image: ImageInterface;
@@ -35,24 +31,33 @@ export default class ProgressiveImage extends Component<
   }
 
   componentDidUpdate(nextProps: ProgressiveImageProps) {
-    if (nextProps.image.src !== this.props.image.src) {
+    const {
+      image: { src },
+    } = this.props;
+    if (nextProps.image.src !== src) {
       this.update();
     }
   }
 
   update = () => {
+    const {
+      image: { preview },
+    } = this.props;
     this.setState({
       loading: true,
-      image: this.props.image.preview,
+      image: preview,
     });
     this.fetchImage();
   };
 
   fetchImage = () => {
-    if (this.props.image.src) {
+    const {
+      image: { src },
+    } = this.props;
+    if (src) {
       const image = new Image();
       image.onload = () => this.setState({ image: image.src, loading: false });
-      image.src = this.props.image.src;
+      image.src = src;
     }
   };
 

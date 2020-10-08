@@ -1,1 +1,5 @@
-export { Button } from 'rebass';
+import { Button } from 'rebass';
+
+export { Button };
+
+export default Button;

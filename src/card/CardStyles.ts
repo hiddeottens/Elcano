@@ -26,10 +26,11 @@ export interface CardProps {
 
 export const CardShadow = styled.div`
   border: none;
-  box-shadow: rgba(50, 50, 93, 0.1) 0px 5px 35px, rgba(0, 0, 0, 0.07) 0px 5px 15px;
+  box-shadow: rgba(50, 50, 93, 0.1) 0px 5px 35px,
+    rgba(0, 0, 0, 0.07) 0px 5px 15px;
   border-radius: 5px;
   padding: 5px;
-`
+`;
 
 export const CardHover = styled.div`
   padding: 5px;
@@ -37,7 +38,7 @@ export const CardHover = styled.div`
   &:hover {
     border: none;
     box-shadow: rgba(50, 50, 93, 0.1) 0px 5px 35px,
-    rgba(0, 0, 0, 0.07) 0px 5px 15px;
+      rgba(0, 0, 0, 0.07) 0px 5px 15px;
     border-radius: 5px;
-  };
-`
+  }
+`;

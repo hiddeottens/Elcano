@@ -5,11 +5,7 @@ export default {
   title: 'Headings',
 };
 
-export const standard = () => (
-  <Heading>
-    Test heading
-    </Heading>
-);
+export const standard = () => <Heading>Test heading</Heading>;
 
 standard.story = {
   name: 'Standard',

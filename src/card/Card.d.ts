@@ -1,5 +1,5 @@
-/// <reference types="react" />
-import './card.css';
+// / <reference types="react" />
+
 export interface CardProps {
   children?: any;
   noHover?: boolean;

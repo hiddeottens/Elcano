@@ -1,1 +1,5 @@
-export { Box } from 'rebass';
+import { Box } from 'rebass';
+
+export { Box };
+
+export default Box;
