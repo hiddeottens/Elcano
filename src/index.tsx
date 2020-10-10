@@ -18,3 +18,4 @@ export * from './nav-container';
 export * from './nav';
 export * from './notification';
 export * from './tiles';
+export * from './textarea';
