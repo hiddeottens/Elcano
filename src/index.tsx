@@ -19,3 +19,5 @@ export * from './nav';
 export * from './notification';
 export * from './tiles';
 export * from './textarea';
+export * from './outline';
+export * from './spinner';
