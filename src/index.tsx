@@ -21,3 +21,6 @@ export * from './tiles';
 export * from './textarea';
 export * from './outline';
 export * from './spinner';
+export * from './static-button';
+export * from './round-button';
+export * from './loading-button';
