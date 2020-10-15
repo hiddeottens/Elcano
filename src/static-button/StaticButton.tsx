@@ -9,6 +9,7 @@ export interface StaticButtonProps {
   loading: boolean;
   show: boolean;
   zIndex: number;
+  [key: string]: any;
 }
 
 interface ContainerProps {
