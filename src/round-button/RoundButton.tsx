@@ -5,6 +5,8 @@ import { Loader } from '../loader';
 export interface RoundButtonProps {
   children: ReactNode;
   loading: boolean;
+  onClick: () => void;
+  backgroundColor?: string;
 }
 
 export const RoundButton = ({
