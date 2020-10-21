@@ -4,11 +4,11 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { LoadingButton } from '../loading-button';
 
 export interface StaticButtonProps {
-  children: ReactNode;
+  children?: ReactNode;
   text: string;
-  loading: boolean;
-  show: boolean;
-  zIndex: number;
+  loading?: boolean;
+  show?: boolean;
+  zIndex?: number;
   onClick: () => void;
 }
 
@@ -35,7 +35,7 @@ const Container = styled(motion.div)<ContainerProps>`
 export const StaticButton = ({
   children = null,
   text,
-  loading,
+  loading = false,
   show = true,
   zIndex = 1,
   ...rest
