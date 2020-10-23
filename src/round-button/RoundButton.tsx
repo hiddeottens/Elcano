@@ -4,7 +4,7 @@ import { Loader } from '../loader';
 
 export interface RoundButtonProps {
   children: ReactNode;
-  loading: boolean;
+  loading?: boolean;
   onClick: () => void;
   backgroundColor?: string;
 }

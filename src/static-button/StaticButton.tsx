@@ -25,7 +25,7 @@ const Container = styled(motion.div)<ContainerProps>`
   left: 0px;
   text-align: right;
   background: #fff;
-  box-shadow: none;
+  box-shadow: 'primary';
   display: flex;
   align-items: center;
   justify-content: flex-end;
