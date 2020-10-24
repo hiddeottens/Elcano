@@ -1,8 +1,12 @@
 import * as React from 'react';
 import { AnimatePresence } from 'framer-motion';
 import { Heading } from '../heading';
-import { Button } from '../button';
-import { Background, ModalBody, ModalHeader } from './ModalStyles';
+import {
+  Background,
+  ModalBody,
+  ModalHeader,
+  ModalCloseButton,
+} from './ModalStyles';
 
 export interface ModalProps {
   children?: any;
@@ -27,9 +31,9 @@ export default function Modal({ show, onClose, title, children }: ModalProps) {
           >
             <ModalHeader>
               <Heading>{title}</Heading>
-              <Button color="black" bg="white" onClick={onClose}>
+              <ModalCloseButton color="black" bg="white" onClick={onClose}>
                 X
-              </Button>
+              </ModalCloseButton>
             </ModalHeader>
             {children}
           </ModalBody>

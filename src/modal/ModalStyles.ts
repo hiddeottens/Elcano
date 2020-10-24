@@ -1,7 +1,8 @@
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
+import { Button } from '../button';
 
-export const ModalBody = styled(motion.div)` 
+export const ModalBody = styled(motion.div)`
   width: 50%;
   height: 50%;
   border-radius: 16px;
@@ -12,12 +13,18 @@ export const ModalBody = styled(motion.div)`
   padding-bottom: 1rem;
 `;
 
-export const ModalHeader = styled.div` 
+export const ModalHeader = styled.div`
   width: 100%;
   height: 20%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+`;
+
+export const ModalCloseButton = styled(Button)`
+  width: auto;
+  color: #000;
+  box-shadow: none;
 `;
 
 export const Background = styled(motion.div)`
