@@ -23,9 +23,7 @@ export const SlideUp = ({ show, onClose, title, children }: SlideUpProps) => (
         >
           <SlideUpHeader>
             <Heading>{title}</Heading>
-            <RoundButton backgroundColor="none" onClick={onClose}>
-              X
-            </RoundButton>
+            <RoundButton onClick={onClose}>X</RoundButton>
           </SlideUpHeader>
           {children}
         </SlideUpBody>
