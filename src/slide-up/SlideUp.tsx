@@ -18,6 +18,7 @@ export const SlideUp = ({ show, onClose, title, children }: SlideUpProps) => (
         <SlideUpBody
           initial={{ opacity: 0, y: '100%' }}
           animate={{ opacity: 1, y: 0 }}
+          transition={{ type: 'tween' }}
           exit={{ opacity: 0, y: '100%' }}
         >
           <SlideUpHeader>
