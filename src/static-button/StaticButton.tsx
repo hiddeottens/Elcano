@@ -9,6 +9,7 @@ export interface StaticButtonProps {
   loading?: boolean;
   show?: boolean;
   zIndex?: number;
+  initial?: boolean;
   onClick: () => void;
 }
 
@@ -38,9 +39,10 @@ export const StaticButton = ({
   loading = false,
   show = true,
   zIndex = 1,
+  initial = false,
   ...rest
 }: StaticButtonProps) => (
-  <AnimatePresence>
+  <AnimatePresence initial={initial}>
     {show && (
       <Container
         zIndex={zIndex}

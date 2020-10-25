@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Button } from '../button';
 
 export const ModalBody = styled(motion.div)`
-  width: 50%;
+  width: 100%;
   height: 50%;
   border-radius: 16px;
   background: #fff;
@@ -11,6 +11,10 @@ export const ModalBody = styled(motion.div)`
   padding-right: 1rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  margin: 1rem;
+  @media (min-width: 650px) {
+    width: 50%;
+  }
 `;
 
 export const ModalHeader = styled.div`

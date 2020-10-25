@@ -14,9 +14,9 @@ interface OutlineComponentProps {
 
 const getBorder = ({ isSelected }: OutlineComponentProps) => {
   if (isSelected) {
-    return '8px solid #c3f8c0';
+    return '4px solid #c3f8c0';
   }
-  return '8px solid #fff';
+  return '4px solid #fff';
 };
 
 const OutlineComponent = styled(Flex)<OutlineComponentProps>`

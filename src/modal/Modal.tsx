@@ -31,7 +31,12 @@ export default function Modal({ show, onClose, title, children }: ModalProps) {
           >
             <ModalHeader>
               <Heading>{title}</Heading>
-              <ModalCloseButton color="black" bg="white" onClick={onClose}>
+              <ModalCloseButton
+                variant="minimal"
+                color="black"
+                bg="white"
+                onClick={onClose}
+              >
                 X
               </ModalCloseButton>
             </ModalHeader>
