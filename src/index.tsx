@@ -26,3 +26,4 @@ export * from './round-button';
 export * from './loading-button';
 export * from './static-round-button';
 export * from './slide-up';
+export * from './slider';
