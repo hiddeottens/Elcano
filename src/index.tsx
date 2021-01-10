@@ -2,6 +2,7 @@ export * from './loader';
 export * from './card';
 export * from './card-overlay';
 export * from './product-card';
+export * from './image-card';
 export * from './progressive-image';
 export * from './modal';
 export * from './heading';
