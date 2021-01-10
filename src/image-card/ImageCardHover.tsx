@@ -1,10 +1,16 @@
 import React from 'react';
-import { Flex, Image } from 'rebass';
+import { Image } from 'rebass';
 import styled from '@emotion/styled';
+import { motion } from 'framer-motion';
 
-const ProductCardContainer = styled(Flex)`
+const ProductCardContainer = styled(motion.div)`
+  cursor: pointer;
   display: flex;
   position: relative;
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px,
+      rgba(0, 0, 0, 0.2) 0px 5px 10px, rgba(0, 0, 0, 0.4) 0px 15px 40px;
+  }
   width: fit-content;
   border-radius: 8px;
   overflow: hidden;
@@ -21,17 +27,24 @@ const StyledImage = styled(Image)<ImageProps>`
   object-fit: cover;
 `;
 
-export interface ImageCardProps {
+export interface ImageCardHoverProps {
   src: string;
   alt: string;
   height?: number;
   width?: number;
+  onClick?: () => void;
 }
 
-export const ImageCard = ({ src, alt, width, height }: ImageCardProps) => (
-  <ProductCardContainer>
+export const ImageCardHover = ({
+  src,
+  onClick,
+  alt,
+  width,
+  height,
+}: ImageCardHoverProps) => (
+  <ProductCardContainer whileHover={{ scale: 1.01 }} onClick={onClick}>
     <StyledImage src={src} alt={alt} width={width} height={height} />
   </ProductCardContainer>
 );
 
-export default ImageCard;
+export default ImageCardHover;
