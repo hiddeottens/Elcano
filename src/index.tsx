@@ -28,3 +28,5 @@ export * from './loading-button';
 export * from './static-round-button';
 export * from './slide-up';
 export * from './slider';
+export * from './backdrop';
+export * from './side-slide';
