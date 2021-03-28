@@ -5,10 +5,10 @@ export interface LoaderProps {
   children?: any;
 }
 
-export default function Loader(props: LoaderProps) {
+export default function Loader({ children }: LoaderProps) {
   return (
     <div style={{ marginTop: 150 }}>
-      {props.children}
+      {children}
       <div className="spinner">
         <div className="bounce1" />
         <div className="bounce2" />
