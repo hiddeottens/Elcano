@@ -11,7 +11,7 @@ export const Background = styled(motion.div)`
   z-index: 1040;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.65);
 `;
 
 export default Background;

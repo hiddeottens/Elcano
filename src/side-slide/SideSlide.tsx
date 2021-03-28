@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { AnimatePresence } from 'framer-motion';
 import { RoundButton } from '../round-button';
-import { SideSlideBody, CloseButtonContainer } from './styles';
+import { SideSlideBody, CloseButtonContainer, CloseButton } from './styles';
 import { Backdrop } from '../backdrop';
 
 export interface SideSlideProps {
@@ -28,7 +28,7 @@ export const SideSlide = ({ show, onClose, children }: SideSlideProps) => (
         transition={{ type: 'tween' }}
         exit={{ opacity: 0, y: '5%' }}
       >
-        <RoundButton onClick={onClose}>X</RoundButton>
+        <CloseButton onClick={onClose} />
       </CloseButtonContainer>
     </Backdrop>
   </AnimatePresence>

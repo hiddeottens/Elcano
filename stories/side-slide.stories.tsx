@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, SideSlide } from '../src';
+import { MenuToggle, Bar, SideSlide } from '../src';
 
 export default {
   title: 'SideSlide',
@@ -9,7 +9,11 @@ export const standard = () => {
   const [show, setshow] = useState(false);
   return (
     <>
-      <Button onClick={() => setshow(!show)}>Click me</Button>
+      <MenuToggle onClick={() => setshow(!show)}>
+        <Bar />
+        <Bar />
+        <Bar />
+      </MenuToggle>
       <SideSlide show={show} onClose={() => setshow(false)} />
     </>
   );

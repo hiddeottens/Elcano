@@ -13,7 +13,7 @@ export function Backdrop({ show, children }: BackdropProps) {
       {show && (
         <Background
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          animate={{ opacity: 0.6 }}
           exit={{ opacity: 0 }}
         >
           {children}
