@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { AnimatePresence } from 'framer-motion';
-import { RoundButton } from '../round-button';
 import { SideSlideBody, CloseButtonContainer, CloseButton } from './styles';
 import { Backdrop } from '../backdrop';
 
