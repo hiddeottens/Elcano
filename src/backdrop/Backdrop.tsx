@@ -3,7 +3,7 @@ import { AnimatePresence } from 'framer-motion';
 import { Background } from './styles';
 
 export interface BackdropProps {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   show: boolean;
 }
 
