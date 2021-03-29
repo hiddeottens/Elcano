@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { MenuToggle, Bar, SideSlide } from '../src';
+import { MenuToggle, Bar, SideSlide, Direction } from '../src';
 
 export default {
   title: 'SideSlide',
 };
 
-export const standard = () => {
+export const standard = ({ ...args }) => {
   const [show, setshow] = useState(false);
   return (
     <>
@@ -14,7 +14,12 @@ export const standard = () => {
         <Bar />
         <Bar />
       </MenuToggle>
-      <SideSlide show={show} onClose={() => setshow(false)} />
+      <SideSlide
+        {...args}
+        show={show}
+        onClose={() => setshow(false)}
+        direction={Direction.RIGHT}
+      />
     </>
   );
 };
