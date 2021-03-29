@@ -30,3 +30,4 @@ export * from './slide-up';
 export * from './slider';
 export * from './backdrop';
 export * from './side-slide';
+export * from './icons';
