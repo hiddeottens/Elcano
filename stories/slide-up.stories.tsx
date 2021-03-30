@@ -11,7 +11,7 @@ export const standard = () => {
     <>
       <StaticRoundButton onClick={() => setshow(!show)}>+</StaticRoundButton>
       <SlideUp
-        title="Add some stuff"
+        heading="Add some stuff"
         show={show}
         onClose={() => setshow(false)}
       />

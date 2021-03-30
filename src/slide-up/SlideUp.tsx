@@ -1,32 +1,39 @@
 import * as React from 'react';
 import { AnimatePresence } from 'framer-motion';
+import { Icon } from '../Icon';
 import { RoundButton } from '../round-button';
-import { Heading } from '../heading';
-import { Background, SlideUpBody, SlideUpHeader } from './SlideUpStyles';
+import {
+  Background,
+  SlideUpBody,
+  SlideUpHeader,
+  SlideUpContainer,
+} from './SlideUpStyles';
 
 export interface SlideUpProps {
-  children?: any;
+  children?: React.ReactNode;
   show: boolean;
   onClose: () => void;
-  title: string;
+  heading: string | JSX.Element;
 }
 
-export const SlideUp = ({ show, onClose, title, children }: SlideUpProps) => (
+export const SlideUp = ({ show, onClose, heading, children }: SlideUpProps) => (
   <AnimatePresence>
     {show && (
       <Background>
-        <SlideUpBody
+        <SlideUpContainer
           initial={{ opacity: 0, y: '100%' }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ type: 'tween' }}
           exit={{ opacity: 0, y: '100%' }}
         >
-          <SlideUpHeader>
-            <Heading>{title}</Heading>
-            <RoundButton onClick={onClose}>X</RoundButton>
+          <SlideUpHeader px={3}>
+            {heading}
+            <RoundButton onClick={onClose}>
+              <Icon icon="times" />
+            </RoundButton>
           </SlideUpHeader>
-          {children}
-        </SlideUpBody>
+          <SlideUpBody px={3}>{children}</SlideUpBody>
+        </SlideUpContainer>
       </Background>
     )}
   </AnimatePresence>
