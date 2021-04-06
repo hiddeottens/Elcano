@@ -1,6 +1,7 @@
-/// <reference types="react" />
+// / <reference types="react" />
+
 export interface CardProps {
-    children?: any;
-    noHover?: boolean;
+  children?: any;
+  noHover?: boolean;
 }
-export default function Card({ noHover, children }: CardProps): JSX.Element;
+export default function Card(props: CardProps): JSX.Element;

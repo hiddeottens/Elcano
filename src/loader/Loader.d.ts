@@ -1,6 +1,7 @@
-/// <reference types="react" />
+// / <reference types="react" />
 import './loader.css';
+
 export interface LoaderProps {
-    children?: any;
+  children?: any;
 }
-export default function Loader({ children }: LoaderProps): JSX.Element;
+export default function Loader(props: LoaderProps): JSX.Element;
