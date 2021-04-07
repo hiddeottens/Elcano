@@ -32,27 +32,29 @@ export const SideSlide = ({
             {children}
           </SideSlideBody>
 
-          {direction === Direction.LEFT ? (
-            <CloseButtonLeft
-              initial={{ opacity: 0, y: '5%' }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ type: 'tween' }}
-              exit={{ opacity: 0, y: '5%' }}
-              onClick={onClose}
-            />
-          ) : (
-            <CloseButtonRight
-              initial={{ opacity: 0, y: '5%' }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ type: 'tween' }}
-              exit={{ opacity: 0, y: '5%' }}
-              onClick={onClose}
-            />
-          )}
+          <>
+            {direction === Direction.LEFT ? (
+              <CloseButtonLeft
+                initial={{ opacity: 0, y: '5%' }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ type: 'tween' }}
+                exit={{ opacity: 0, y: '5%' }}
+                onClick={onClose}
+              />
+            ) : (
+              <CloseButtonRight
+                initial={{ opacity: 0, y: '5%' }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ type: 'tween' }}
+                exit={{ opacity: 0, y: '5%' }}
+                onClick={onClose}
+              />
+            )}
+          </>
         </>
       )}
     </AnimatePresence>
-    <Backdrop show={show} />
+    <Backdrop show={show} onClick={onClose} />
   </>
 );
 
